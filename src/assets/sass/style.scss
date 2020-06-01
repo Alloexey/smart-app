@@ -1,0 +1,47 @@
+@import "vars";
+
+//@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+/* Default styles */
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    background-color: $white;
+    font-family: 'Raleway-Reg';
+    color: $black;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    div {
+        outline: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* slider */
+
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
+
+/* Blocks */
+
+@import "blocks/bookmarks";
+@import "blocks/page-grid.scss";
+@import "vendor/slider.scss";

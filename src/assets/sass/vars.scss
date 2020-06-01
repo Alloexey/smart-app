@@ -1,0 +1,38 @@
+$white: #fff;
+$black: #000;
+$gray: #878787;
+$green: #5dca88;
+$blue-light: #f2f9fe;
+$footer-bg: #2d312f;
+$btn-text: #1e5e68;
+$title-main: #636c6c;
+$onec-text: #9aa1a2;
+
+
+
+/* fonts */
+
+@font-face {
+    font-family: 'Proxima';
+    src: url("../fonts/ProximaNova-Extrabld.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway-Reg';
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway-Light';
+    src: url("../fonts/Raleway-Light.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway-Bold';
+    src: url("../fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Droid Serif';
+    src: url("../fonts/DroidSerif-Italic.ttf");
+}

@@ -1,0 +1,66 @@
+.tabs__header {
+    font-size: 1.3rem;
+    padding-top: 6rem;   
+  }
+
+.tab__h {     
+    text-align: center;
+    color: $black;    
+    opacity: .5; 
+    cursor: pointer;     
+    padding-left: 2rem;  
+    line-height: 6rem;   
+    
+    i {
+        margin-right: 2rem;
+        font-size: 36px;        
+    }
+}
+
+.tab__b {    
+    display: none;
+    padding: 20px;        
+}
+
+.active {
+    border-right: 10px solid $green; 
+    margin-right: -10px;
+    opacity: 1; 
+
+    transition: border-right .2s linear;
+
+    i {
+        color: $green;
+    }
+}
+
+.bookmarks-content {
+    margin-left: 10rem;
+}
+
+.bookmarks__icon {
+    font-size: 24rem;    
+    color: $green;    
+    text-align: center;
+    line-height: 0;
+    margin-bottom: 5.7rem;
+}
+
+.bookmarks__title {
+    text-align: start;
+    font-size: 1.6rem;
+    font-family: 'Raleway-Bold';
+    color: $title-main;
+    opacity: .8;    
+}
+
+.bookmarks__text {   
+    font-family: 'Raleway-Light'; 
+    font-size: 1rem;    
+    color: $title-main;
+    opacity: .8;
+    align-content: flex-start;
+
+    margin-top: 3rem;
+    
+}

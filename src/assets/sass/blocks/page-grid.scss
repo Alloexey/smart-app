@@ -1,0 +1,425 @@
+.page-grid {
+    width: 100%;   
+    
+    display: grid;
+    grid-template-columns: 1fr repeat(12, 97.5px) 1fr;
+    grid-auto-rows: minmax(100px, auto);    
+    grid-template-areas:
+    '. nav nav nav nav nav nav nav nav nav nav nav nav .'
+
+    'intro intro intro intro intro intro intro intro intro intro intro intro intro intro'  
+
+    '. title title title title title title title title title title title title .'
+
+    '. bo-nav bo-nav bo-nav bo-nav bo-cont bo-cont bo-cont bo-cont bo-cont bo-cont bo-cont bo-con .'
+    
+    'onec onec onec onec onec onec onec onec onec onec onec onec onec onec'
+
+    '. title2 title2 title2 title2 title2 title2 title2 title2 title2 title2 title2 title2 .'
+
+    '. slider slider slider slider slider slider slider slider slider slider slider slider .'
+
+    'onec2 onec2 onec2 onec2 onec2 onec2 onec2 onec2 onec2 onec2 onec2 onec2 onec2 onec2'
+
+    '. about about about about about about about about about about about about .'
+
+    'subs subs subs subs subs subs subs subs subs subs subs subs subs subs'
+    
+    'footer footer footer footer footer footer footer footer footer footer footer footer footer footer';
+}
+
+.nav {
+    grid-area: nav;   
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+     'nav-logo nav-logo nav-menu nav-menu nav-menu nav-menu . . nav-contacts nav-contacts nav-contacts nav-contacts';
+    align-content: center;
+    text-align: start;
+
+    &__logo {
+      grid-area: nav-logo;
+
+      font-family: 'Proxima';
+      font-size: 2rem;
+    }
+
+    &__menu {
+      grid-area: nav-menu;
+
+      align-self: center;
+      line-height: 3.5rem;
+    }
+
+    &__link {
+      margin-right: 3rem;
+      font-family: 'Raleway-Reg';
+      font-size: .9rem;  
+      
+      &:last-child {
+        margin-right: 0;
+      }
+      
+    }
+
+    &__contacts {
+      grid-area: nav-contacts;
+      display: flex;  
+      align-self: center;
+      justify-self: end;
+         
+      
+      .phone-icon {
+        margin-right: .6rem;
+        align-self: center;
+        padding-top: 2px;
+      }
+
+      .phone-number {
+        margin-right: 2.6rem;
+        font-size: 1.1rem;
+      }
+
+      .email-icon {
+        margin-right: .6rem;
+        align-self: center;
+        padding-top: 2px;
+      }
+
+      .email-address {
+        font-size: 1.1rem;
+      }
+
+    }
+}
+
+.intro {
+    grid-area: intro;
+    background: url(../img/header-bg.png);
+    background-size: cover;
+    
+    position: relative;
+
+    min-height: 790px;         
+
+    display: grid;
+    grid-template-columns: 1fr 500px 670px 1fr;
+    grid-template-areas: '. intro-text intro-img .';
+    
+    &__text {
+      grid-area: intro-text;      
+      color: $white;
+      padding-top: 12rem;
+    }
+
+    &-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    &-subtitle {
+      font-family: 'Raleway-Light';
+      font-size: 2.5rem;      
+    }
+
+    &-content {
+      font-family: 'Raleway-Light';
+      margin: 3rem 0;
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 500px;
+    } 
+
+    &__img {
+        grid-area: intro-img;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+  }
+
+.btn {
+    font-family: 'Raleway-Bold';
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 1rem 3.7rem;
+    border: 2px solid $white;
+    border-radius: 100px;
+     transition: background-color .5s linear;
+     transition: color .5s linear;
+
+     &:hover {
+       color: $btn-text;
+       background-color: $white;       
+     }
+  }
+
+.title {
+    grid-area: title;
+    padding: 110px 0;
+    
+    &__main {
+      text-align: center;
+      font-family: 'Raleway-Bold';
+      color: $title-main;
+      font-size: 2rem;
+    }
+
+    &__text {
+      color: $title-main;  
+      font-weight: 300;  
+      font-size: 1.07rem;  
+      width: 750px;
+      margin: 40px auto 0;
+      text-align: center;
+    }
+  } 
+  
+.bookmarks-nav {
+    grid-area: bo-nav;
+  }
+
+.bookmarks-content {
+    grid-area: bo-cont;
+    margin-bottom: 10rem;
+  }
+
+.onec {
+    grid-area: onec;
+    background-color: $blue-light;
+
+    display: grid;
+    grid-template-columns: 1fr 585px 585px 1fr;
+    grid-template-areas: '. onec-text onec-img .';
+    align-content: center;  
+    padding: 80px 0;  
+
+    &__text {
+      grid-area: onec-text;
+      text-align: start;
+      padding: 11rem 0;
+    }
+
+    &__title {
+      color: $green;
+      font-size: 2.5rem;
+      font-weight: 700;      
+
+      &:after {
+          content: '';
+          display: block;
+          width: 20%;
+          height: 1px;
+          background-color: $gray;
+          opacity: .5;
+          margin-top: 1rem;        
+      }
+    }
+
+    &__subtitle {
+        font-family: 'Raleway-Light';
+        font-size: 2.5rem; 
+        margin-top: 2rem; 
+        color: $onec-text;    
+      }
+
+    &__content {
+        margin: 3rem 0;
+        color: $onec-text;
+    }
+
+    &__btn {
+      color: $onec-text;
+      font-family: 'Raleway-Bold';
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      padding: 1rem 3.7rem;
+      border: 2px solid $onec-text;
+      border-radius: 100px;
+      transition: background-color .2s linear;
+      transition: color .2s linear;
+
+      &:hover {
+       color: $blue-light;
+       background-color: $onec-text;       
+      }
+    }
+
+    &__img {
+        grid-area: onec-img;        
+        align-self: center;        
+        text-align: center;
+      }
+  }
+
+.title2 {
+    grid-area: title2;
+    padding: 110px 0;
+    
+    &__main {
+      text-align: center;
+      font-family: 'Raleway-Bold';
+      color: $title-main;
+      font-size: 2rem;
+    }
+
+    &__text {
+      color: $title-main;  
+      font-weight: 300;  
+      font-size: 1.07rem;  
+      width: 750px;
+      margin: 40px auto 0;
+      text-align: center;
+    }
+}
+
+.slider-con {
+    grid-area: slider; 
+    margin-bottom: 128px;
+  }
+
+.onec2 {
+  grid-area: onec2; 
+  
+  background-color: $blue-light;
+
+    display: grid;
+    grid-template-columns: 1fr 585px 585px 1fr;
+    grid-template-areas: '. onec-img onec-text .';
+    align-content: center;
+    padding: 80px 0;
+}
+
+.about {
+  grid-area: about;
+  padding: 80px;
+  
+  &__title {
+    font-size: 2.3rem;
+    font-family: 'Raleway-Bold';
+    color: #636c6c;
+  }
+
+  &__img {
+    margin: 3rem auto;
+  }
+
+  &__text {
+    font-family: 'Droid Serif';
+    font-size: 1.6rem;
+    color: #8c9494;
+  }
+
+  &__name {
+    margin: 2.5rem auto;
+    color: $green;
+    font-size: 1.6rem;
+  }
+}
+
+.subs {
+  grid-area: subs;
+
+  width: 100%;
+  background-color: #f3f5f5;
+  padding: 95px 0 120px;
+  margin: 0 auto;  
+  text-align: center;
+
+  position: relative;
+
+  &__title {
+    font-family: 'Raleway-Bold';
+    color: #8c9494;
+    font-size: 2.4rem;
+    margin-bottom: 4rem;
+
+    i {
+      font-size: 40px;
+      margin-right: 1.4rem;
+    }
+  }
+
+  &__input {
+    width: 770px;
+    padding: 24px 50px;
+    border-radius: 100px;
+    border: 1px solid $gray;
+    background-color: $white;
+    font-size: 1.2rem;
+    outline: none;
+
+    &::placeholder {
+      font-size: 1.2rem;
+      color: #8c9494;
+      line-height: 1.4;
+    }
+  }
+
+  &__btn {
+    margin-left: -8rem;
+
+    border: 1px solid $green;
+    border-radius: 100px;
+    background-color: $green;
+    padding: 22px 50px;
+    text-transform: uppercase;
+    color: $white;
+    outline: none;
+    font-size: 1.4rem;
+
+    &:hover {
+      background-color: #f3f5f5;
+      color: $green;
+      font-weight: 700;
+    }
+  }
+}
+
+.footer {
+  grid-area: footer;
+
+  padding: 80px 0 50px;
+  background-color: #2d312f;  
+  width: 100%;
+  text-align: center;
+  color: #5d6461;
+
+  &__social {
+    margin-bottom: 1.2rem;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    margin-bottom: 38px;
+  }
+
+  &__social-icon {
+    font-size: 36px;
+    margin-right: 1rem;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  &__nav-menu {
+    &__link {
+      margin-right: 1rem;
+      font-size: 1.2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $green;
+    }
+    }
+  }
+}
