@@ -13,7 +13,6 @@ $(function() {
     );
 
     $('#slider__arrow-next').on("click", function() {
-        console.log('work');
         $('#slider').slick('slickNext');
     });
 
